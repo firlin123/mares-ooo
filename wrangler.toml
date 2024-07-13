@@ -1,0 +1,40 @@
+name = "mares-ooo"
+main = "src/worker.js"
+compatibility_date = "2024-07-11"
+workers_dev = false
+
+[[routes]]
+pattern = "https://www.mares.ooo/*"
+zone_name = "mares.ooo"
+
+[[routes]]
+pattern = "https://mares.ooo/*"
+zone_name = "mares.ooo"
+
+[[routes]]
+pattern = "https://submit.mares.ooo/*"
+zone_name = "mares.ooo"
+
+[[routes]]
+pattern = "https://www.submit.mares.ooo/*"
+zone_name = "mares.ooo"
+
+[[routes]]
+pattern = "mares.ooo"
+zone_name = "mares.ooo"
+custom_domain = true
+
+[[routes]]
+pattern = "www.mares.ooo"
+zone_name = "mares.ooo"
+custom_domain = true
+
+[[routes]]
+pattern = "submit.mares.ooo"
+zone_name = "mares.ooo"
+custom_domain = true
+
+[[routes]]
+pattern = "www.submit.mares.ooo"
+zone_name = "mares.ooo"
+custom_domain = true
