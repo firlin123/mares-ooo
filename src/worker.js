@@ -28,7 +28,7 @@ const MARE_OOOS = [
     { file: 'img/twilight-sparkle/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1628/19/1628196256020.png', alt: 'Twilight ooo' },
     { file: 'img/berry-punch/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1624/85/1624851036061.png', alt: 'Berry Cam ooo' },
     { file: 'img/twilight-sparkle/4.png', source: 'https://derpicdn.net/img/download/2012/7/7/35567.gif', alt: 'You are from the fooooooture?' },
-    { file: 'img/pinie-pie/2.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1489/86/1489867908850.gif', alt: 'Ponk ooo dance' },
+    { file: 'img/pinkie-pie/2.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1489/86/1489867908850.gif', alt: 'Ponk ooo dance' },
     { file: 'img/twilight-sparkle/5.jpg', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1616/14/1616149083626.jpg', alt: 'Twilight ooo' },
     { file: 'img/sea-swirl/1.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1442/14/1442141572316.gif', alt: 'Sea Swirl what are you thinking my dear? You haven\'t got the bits to be shopping \'round here' },
     { file: 'img/coco-pommel/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1436/85/1436858134074.png', alt: 'Coco ooo' },
