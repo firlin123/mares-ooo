@@ -55,6 +55,31 @@ const MARE_OOOS = [
     { file: 'img/lyra-heartstrings/2.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1329/54/1329545895182.gif', alt: 'Lyra ooo' },
     { file: 'img/marble-pie/1.png', source: 'https://kissable.bluefast.horse/yjzrqcsj.png', alt: 'Marble ooo' },
     { file: 'img/limestone-pie/1.png', source: 'https://kissable.bluefast.horse/ej8mq1r.png', alt: 'Limestone ooo' },
+    { file: 'img/fluttershy/4.png', source: 'https://derpicdn.net/img/view/2020/4/6/2315214.png', alt: 'Fluttershy ooo' },
+    { file: 'img/cherry-berry/2.png', source: 'https://derpicdn.net/img/download/2020/8/21/2428058.png', alt: 'Cherry ooo' },
+    { file: 'img/multi-ooos/4.gif', source: 'https://derpicdn.net/img/download/2016/2/7/1082843.gif', alt: 'Cherry Berry and Twinkeshine oooing' },
+    { file: 'img/pinkie-pie/4.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1593/76/1593761309022.jpg', alt: 'Oooopside down Ponk' },
+    { file: 'img/daisy/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1638/65/1638656399008.png', alt: 'Daisy ooo' },
+    { file: 'img/twilight-sparkle/11.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1603/57/1603577962988.png', alt: 'Twilight ooo' },
+    { file: 'img/pinkie-pie/5.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1433/99/1433999612951.gif', alt: 'Ponk ooo' },
+    { file: 'img/carrot-top/2.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1460/82/1460821968469.png', alt: 'Carrot ooo' },
+    { file: 'img/twilight-sparkle/12.jpg', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1632/08/1632085813926.jpg', alt: 'Twilight ooo' },
+    { file: 'img/berry-punch/4.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1417/92/1417922044279.png', alt: 'Berry ooo' },
+    { file: 'img/multi-ooos/5.png', source: 'S01E11 - Winter Wrap Up', alt: 'Carrot Top, Applejack, and Cherry Berry ooo' },
+    { file: 'img/carrot-top/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1622/21/1622219578632.png', alt: 'Carrot ooo' },
+    { file: 'img/bon-bon/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1624/46/1624468356921.png', alt: 'Angry ooo' },
+    { file: 'img/roseluck/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1339/04/1339040465059.png', alt: 'Roseluck ooo' },
+    { file: 'img/roseluck/2.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1418/48/1418487813647.png', alt: 'Roseluck ooo' },
+    { file: 'img/bon-bon/2.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1618/53/1618534104753.png', alt: 'Bon Bon ooo' },
+    { file: 'img/rainbow-dash/3.jpg', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1407/38/1407382488453.jpg', alt: 'Rainbow ooo' },
+    { file: 'img/peachy-cream/1.gif', source: 'https://derpicdn.net/img/download/2016/2/1/1077976.gif', alt: 'Peachy boooop' },
+    { file: 'img/cherry-berry/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1624/50/1624503071755.png', alt: 'Cherry ooo' },
+    { file: 'pinki-pie/6.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1471/05/1471051430679.gif', alt: 'Ponk ooo' },
+    { file: 'img/multi-ooos/6.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1622/13/1622134287964.png', alt: 'Amethyst and Bon Bon ooo' },
+    { file: 'img/multi-ooos/7.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1628/95/1628957199514.png', alt: 'Rarity, Twilight, and Pinkie ooo' },
+    { file: 'img/fluttershy/5.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1623/51/1623518404621.png', alt: 'Fluttershy ooo' },
+    { file: 'img/lyra-heartstrings/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1629/14/1629144803243.png', alt: 'Lyra ooo' },
+    { file: 'img/applejack/5.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1616/51/1616515203929.gif', alt: 'Applejack ooo' },
     // TODOOOOO: Add more
 ];
 
@@ -114,7 +139,11 @@ export default {
         if (url.hostname === 'submit.mares.ooo' || url.hostname === 'www.submit.mares.ooo') {
             return redirect('https://github.com/firlin123/mares-ooo/issues/new');
         }
-        const randomMareOoo = MARE_OOOS[Math.floor(Math.random() * MARE_OOOS.length)];
+        let useOoo = null;
+        if (url.pathname.startsWith('/test/') && MARE_OOOS[url.pathname.slice(6)]) {
+            useOoo = MARE_OOOS[url.pathname.slice(6)];
+        }
+        const randomMareOoo = useOoo ? useOoo : MARE_OOOS[Math.floor(Math.random() * MARE_OOOS.length)];
         return createHtmlResponse(
             `<title>Mares.ooo</title><style>${STYLE}</style>`,
             `<!-- Source: ${randomMareOoo.source} --><img src="https://firlin123.github.io/mares-ooo/${randomMareOoo.file}" alt="${randomMareOoo.alt}">`
