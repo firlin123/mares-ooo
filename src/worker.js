@@ -74,7 +74,7 @@ const MARE_OOOS = [
     { file: 'img/rainbow-dash/3.jpg', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1407/38/1407382488453.jpg', alt: 'Rainbow ooo' },
     { file: 'img/peachy-cream/1.gif', source: 'https://derpicdn.net/img/download/2016/2/1/1077976.gif', alt: 'Peachy boooop' },
     { file: 'img/cherry-berry/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1624/50/1624503071755.png', alt: 'Cherry ooo' },
-    { file: 'pinki-pie/6.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1471/05/1471051430679.gif', alt: 'Ponk ooo' },
+    { file: 'pinkie-pie/6.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1471/05/1471051430679.gif', alt: 'Ponk ooo' },
     { file: 'img/multi-ooos/6.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1622/13/1622134287964.png', alt: 'Amethyst and Bon Bon ooo' },
     { file: 'img/multi-ooos/7.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1628/95/1628957199514.png', alt: 'Rarity, Twilight, and Pinkie ooo' },
     { file: 'img/fluttershy/5.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1623/51/1623518404621.png', alt: 'Fluttershy ooo' },
