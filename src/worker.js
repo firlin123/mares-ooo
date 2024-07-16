@@ -118,14 +118,11 @@ const MARE_OOOS = [
     { file: 'img/starlight-glimmer/4.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1603/94/1603946763021.gif', alt: 'Starlight ooo' },
     { file: 'img/apple-bloom/2.jpg', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1602/09/1602097717357.jpg', alt: 'Apple Bloooom' },
     { file: 'img/luna/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1561/21/1561219973441.png', alt: 'Luuuuuna' },
-
+    { file: 'img/linky/3.jpg', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1669/99/1669998066747.jpg', alt: 'Linkooo' },
+    { file: 'img/lightning-bolt/3.png', source: 'https://derpicdn.net/img/download/2013/2/20/249526.png', alt: 'Lightning Bolt ooo' },
 
     // TODOOOOO: Add more
 ];
-
-// ffmpeg -i /media/firlin123/NTFS-PART/002_Sorted_HDD/MLP/mlp-fim_s1\[1080P\]/YP-1R-01x06.mkv -vf "crop=484:558:802:522" -ss 00:06:12.289 -to 00:06:14.750 frames/%04d.png
-
-// tar 
 
 function createHtmlResponse(head, body, headers = {}, status = 200) {
     headers = headers || {};
