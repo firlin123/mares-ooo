@@ -120,6 +120,7 @@ const MARE_OOOS = [
     { file: 'img/luna/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1561/21/1561219973441.png', alt: 'Luuuuuna' },
     { file: 'img/linky/3.jpg', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1669/99/1669998066747.jpg', alt: 'Linkooo' },
     { file: 'img/lightning-bolt/3.png', source: 'https://derpicdn.net/img/download/2013/2/20/249526.png', alt: 'Lightning Bolt ooo' },
+    { file: 'img/sonata/1.png', source: 'https://pomf2.lain.la/f/en13d7je.png', alt: 'Sooooonata' },
 
     // TODOOOOO: Add more
 ];
