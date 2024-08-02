@@ -123,6 +123,8 @@ const MARE_OOOS = [
     { file: 'img/sonata/1.png', source: 'https://pomf2.lain.la/f/en13d7je.png', alt: 'Sooooonata' },
     { file: 'img/cheerilee/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/45/1722453340153.png', alt: 'Cheerooolee' },
     { file: 'img/fleetfoot/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1545/88/1545884262648.png', alt: 'Fleetfooooot' },
+    { file: 'img/strawberry-sunrise/1.png', source: 'https://derpicdn.net/img/download/2017/6/9/1457847.png', alt: 'Strawberry ooo' },
+    { file: 'img/pacific-glow/1.png', source: 'S06E09 - The Saddle Row Review', alt: 'Pacific ooo' },
     // TODOOOOO: Add more
 ];
 
