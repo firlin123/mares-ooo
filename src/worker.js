@@ -126,6 +126,7 @@ const MARE_OOOS = [
     { file: 'img/strawberry-sunrise/1.png', source: 'https://derpicdn.net/img/download/2017/6/9/1457847.png', alt: 'Strawberry ooo' },
     { file: 'img/pacific-glow/1.png', source: 'S06E09 - The Saddle Row Review', alt: 'Pacific ooo' },
     { file: 'img/pacific-glow/2.png', source: 'S06E09 - The Saddle Row Review', alt: 'Pacific ooo' },
+    { file: 'img/little-pip/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1473/03/1473037794305.png', alt: 'Little Pip ooo' },
     // TODOOOOO: Add more
 ];
 
