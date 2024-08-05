@@ -130,6 +130,11 @@ const MARE_OOOS = [
     { file: 'img/twilight-sparkle/15.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1563/90/1563900041737.jpg', alt: 'Twilight ooo' },
     { file: 'img/apple-brown-betty/1.png', source: 'https://derpicdn.net/img/download/2022/8/29/2937619.png', alt: 'ABB ooo' },
     { file: 'img/sunshower-raindrops/1.png', source: 'https://derpicdn.net/img/download/2024/8/3/3413962.png', alt: 'Sunshooower Raindroooops' },
+    { file: 'img/apple-cobbler/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/78/1722785952074.png', alt: 'Apple Cobbler ooo' },
+    { file: 'img/roseluck/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/79/1722797426787.png', alt: 'Roseluck ooo' },
+    { file: 'img/multi-ooos/9.png', source: 'https://derpicdn.net/img/download/2024/8/5/3415058.png', alt: 'Diamond Mint and Serena oooing at each other (and Drizzle is also there)' },
+    { file: 'img/rainbow-dash/8.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/83/1722835024662.png', alt: 'Rainbow ooo' },
+    { file: 'img/rarity/9.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/83/1722836957139.png', alt: 'Rarity ooo' },
     // TODOOOOO: Add more
 ];
 
