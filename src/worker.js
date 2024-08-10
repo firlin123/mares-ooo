@@ -8,7 +8,7 @@ const MARE_OOOS = [
     { file: 'img/twilight-sparkle/1.gif', source: 'https://derpicdn.net/img/download/2015/12/21/1049299.gif', alt: 'Twi ooo' },
     { file: 'img/starlight-glimmer/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1673/28/1673280285649.png', alt: 'Starlight ooo' },
     { file: 'img/starlight-glimmer/2.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1687/11/1687112778739.png', alt: 'Starlight ooo' },
-    { file: 'img/unknown/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1638/65/1638658092189.png', alt: 'Obscure mare ooo' },
+    { file: 'img/downdraft/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1638/65/1638658092189.png', alt: 'Downdraft ooo' },
     { file: 'img/fluttershy/2.png', source: 'https://derpicdn.net/img/download/2018/10/27/1867701.png', alt: 'Flutter ooo' },
     { file: 'img/luna/1.jpg', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1366/33/1366330264809.jpg', alt: 'Luuuuuna' },
     { file: 'img/applejack/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1616/35/1616351674956.png', alt: 'Applejack ooo' },
@@ -64,7 +64,7 @@ const MARE_OOOS = [
     { file: 'img/pinkie-pie/5.gif', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1433/99/1433999612951.gif', alt: 'Ponk ooo' },
     { file: 'img/carrot-top/2.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1460/82/1460821968469.png', alt: 'Carrot ooo' },
     { file: 'img/twilight-sparkle/12.jpg', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1632/08/1632085813926.jpg', alt: 'Twilight ooo' },
-    { file: 'img/berry-punch/4.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1417/92/1417922044279.png', alt: 'Berry ooo' },
+    { file: 'img/berry-punch/4.png', source: 'https://derpicdn.net/img/view/2024/8/7/3416271.png', alt: 'Berry Punch ooo' },
     { file: 'img/multi-ooos/5.png', source: 'S01E11 - Winter Wrap Up', alt: 'Carrot Top, Applejack, and Cherry Berry ooo' },
     { file: 'img/carrot-top/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1622/21/1622219578632.png', alt: 'Carrot ooo' },
     { file: 'img/bon-bon/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1624/46/1624468356921.png', alt: 'Angry ooo' },
@@ -135,6 +135,29 @@ const MARE_OOOS = [
     { file: 'img/multi-ooos/9.png', source: 'https://derpicdn.net/img/download/2024/8/5/3415058.png', alt: 'Diamond Mint and Serena oooing at each other (and Drizzle is also there)' },
     { file: 'img/rainbow-dash/8.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/83/1722835024662.png', alt: 'Rainbow ooo' },
     { file: 'img/rarity/9.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/83/1722836957139.png', alt: 'Rarity ooo' },
+    { file: 'img/zecora/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/87/1722871125887.png', alt: 'Zecooora' },
+    { file: 'img/downdraft/2.png', source: 'https://derpicdn.net/img/view/2024/8/6/3415784.png', alt: 'Downdraft ooo' },
+    { file: 'img/peachy-pitt/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/92/1722929033757.png', alt: 'Peachy Pitt ooo' },
+    { file: 'img/multi-ooos/10.webm', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/93/1722935000786.webm', alt: 'Mane 6 superbooowl' },
+    { file: 'img/multi-ooos/11.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/94/1722941842075.png', alt: 'Berry Punch, Dizzy Twister, Carrot Top, Spring Melody, Noi, and Ruby Pinch all oooing' },
+    { file: 'img/cherry-berry/4.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/96/1722960516543.png', alt: 'Cherry ooo' },
+    { file: 'img/cheerilee/2.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/96/1722962868839.png', alt: 'Cheerilee ooo' },
+    { file: 'img/allie-way/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/98/1722980874543.png', alt: 'Allie ooo' },
+    { file: 'img/linky/4.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1722/99/1722991655822.png', alt: 'Linky ooo' },
+    { file: 'img/fluttershy/9.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/05/1723053308038.png', alt: 'Fluttershy ooo' },
+    { file: 'img/carrot-top/4.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/06/1723060274658.png', alt: 'Carrot ooo' },
+    { file: 'img/sunshower-raindrops/2.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/10/1723101002435.png', alt: 'Sunshower ooo' },
+    { file: 'img/linky/5.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/13/1723134853280.png', alt: 'Linky ooo' },
+    { file: 'img/florina-tart/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/15/1723151745395.png', alt: 'Florina ooo' },
+    { file: 'img/marry-may/1.png', source: 'S04E20 - Leap of Faith', alt: 'Marry ooo' },
+    { file: 'img/sea-swirl/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/21/1723215701337.png', alt: 'fancy Sea Swirl ooo' },
+    { file: 'img/multi-ooos/12.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/21/1723219081589.png', alt: 'North Star, Swan Song, Linky, Sea Swirl, Bon Bon, Carrot Top, Silver Frames, and Fine Line all fancy and oooing' },
+    { file: 'img/apple-bloom/3.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/21/1723219527555.png', alt: 'Apple Bloooom' },
+    { file: 'img/upper-crust/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/23/1723238534994.png', alt: 'Upper Crust ooo' },
+    { file: 'img/suri-polomare/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/24/1723241073663.png', alt: 'Suri ooo' },
+    { file: 'img/multi-ooos/13.webm', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/24/1723241657797.webm', alt: 'Rarity and Celestia ooo' },
+    { file: 'img/cloverbelle/1.png', source: 'https://derpicdn.net/img/download/2023/11/12/3239182.png', alt: 'Cloverbelle ooo' },
+
     // TODOOOOO: Add more
 ];
 
@@ -176,7 +199,7 @@ body {
     margin: 0;
 }
 
-img {
+img, video {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -197,9 +220,12 @@ export default {
             useOoo = MARE_OOOS[url.pathname.slice(6)];
         }
         const randomMareOoo = useOoo ? useOoo : MARE_OOOS[Math.floor(Math.random() * MARE_OOOS.length)];
+        const el = randomMareOoo.file.endsWith('.webm') 
+            ? `<video autoplay loop muted src="https://firlin123.github.io/mares-ooo/${randomMareOoo.file}" alt="${randomMareOoo.alt}"></video>`
+            : `<img src="https://firlin123.github.io/mares-ooo/${randomMareOoo.file}" alt="${randomMareOoo.alt}">`;
         return createHtmlResponse(
             `<title>Mares.ooo</title><style>${STYLE}</style>`,
-            `<!-- Source: ${randomMareOoo.source} --><img src="https://firlin123.github.io/mares-ooo/${randomMareOoo.file}" alt="${randomMareOoo.alt}">`
+            `<!-- Source: ${randomMareOoo.source} -->${el}`
         );
     }
 };
