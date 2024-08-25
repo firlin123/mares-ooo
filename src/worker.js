@@ -157,8 +157,10 @@ const MARE_OOOS = [
     { file: 'img/suri-polomare/1.png', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/24/1723241073663.png', alt: 'Suri ooo' },
     { file: 'img/multi-ooos/13.webm', source: 'https://desu-usergeneratedcontent.xyz/mlp/image/1723/24/1723241657797.webm', alt: 'Rarity and Celestia ooo' },
     { file: 'img/cloverbelle/1.png', source: 'https://derpicdn.net/img/download/2023/11/12/3239182.png', alt: 'Cloverbelle ooo' },
-
+    { file: 'img/raven-inkwell/1.png', source: 'https://derpicdn.net/img/download/2024/8/19/3424519.png', alt: 'Raven ooo' },
+    { file: 'img/sonata/2.png', source: 'https://pomf2.lain.la/f/nrt9imt3.png', alt: 'Sonata Ooobjection!' },
     // TODOOOOO: Add more
+    // https://mares.ooo/test/157
 ];
 
 function createHtmlResponse(head, body, headers = {}, status = 200) {
