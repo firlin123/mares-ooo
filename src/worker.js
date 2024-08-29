@@ -159,6 +159,7 @@ const MARE_OOOS = [
     { file: 'img/cloverbelle/1.png', source: 'https://derpicdn.net/img/download/2023/11/12/3239182.png', alt: 'Cloverbelle ooo' },
     { file: 'img/raven-inkwell/1.png', source: 'https://derpicdn.net/img/download/2024/8/19/3424519.png', alt: 'Raven ooo' },
     { file: 'img/sonata/2.png', source: 'https://pomf2.lain.la/f/nrt9imt3.png', alt: 'Sonata Ooobjection!' },
+    { file: 'img/icy-rain/1.png', source: 'https://derpicdn.net/img/download/2023/1/29/3035821.png', alt: 'Icy Rain ooo' },
     // TODOOOOO: Add more
     // https://mares.ooo/test/157
 ];
