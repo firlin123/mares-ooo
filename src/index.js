@@ -13,7 +13,7 @@ const MARE_OOOS = [];
 for (const path in oooImports) {
   const module = oooImports[path];
   const data = typeof module === 'function' ? await module() : module;
-  LOADED_OOOS.push(data);
+  MARE_OOOS.push(data);
 }
 
 function createHtmlResponse(head, body, headers = {}, status = 200) {
