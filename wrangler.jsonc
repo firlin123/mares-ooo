@@ -1,0 +1,53 @@
+{
+  "name": "mares-ooo",
+  "main": "src/index.js",
+  "workers_dev": false,
+  "preview_urls": false,
+  "compatibility_date": "2024-07-11",
+  "routes": [
+    {
+      "pattern": "https://www.mares.ooo/*",
+      "zone_name": "mares.ooo"
+    },
+    {
+      "pattern": "https://mares.ooo/*",
+      "zone_name": "mares.ooo"
+    },
+    {
+      "pattern": "https://submit.mares.ooo/*",
+      "zone_name": "mares.ooo"
+    },
+    {
+      "pattern": "https://www.submit.mares.ooo/*",
+      "zone_name": "mares.ooo"
+    },
+    {
+      "pattern": "mares.ooo",
+      "zone_name": "mares.ooo",
+      "custom_domain": true,
+      "enabled": true,
+      "previews_enabled": false
+    },
+    {
+      "pattern": "www.mares.ooo",
+      "zone_name": "mares.ooo",
+      "custom_domain": true,
+      "enabled": true,
+      "previews_enabled": false
+    },
+    {
+      "pattern": "submit.mares.ooo",
+      "zone_name": "mares.ooo",
+      "custom_domain": true,
+      "enabled": true,
+      "previews_enabled": false
+    },
+    {
+      "pattern": "www.submit.mares.ooo",
+      "zone_name": "mares.ooo",
+      "custom_domain": true,
+      "enabled": true,
+      "previews_enabled": false
+    }
+  ]
+}
