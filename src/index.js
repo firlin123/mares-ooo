@@ -1,6 +1,14 @@
 const oooImports = import.meta.glob('../ponies/*/*.json', { eager: true });
 
-/** @type {Array<{ source: string, alt: string, file: string }>} */
+/**
+ * @typedef {Object} MareOoo
+ * @property {string} source - The source of the image/video (e.g., link or episode name).
+ * @property {string} alt - The alt text for the image/video
+ * @property {string} file - The file path to the image/video.
+ * @property {boolean} [video] - Whether the file is a video (optional, defaults to false).
+ */
+
+/** @type {MareOoo[]} */
 const MARE_OOOS = [];
 for (const path in oooImports) {
   const module = oooImports[path];
@@ -62,12 +70,16 @@ export default {
     if (url.hostname === 'submit.mares.ooo' || url.hostname === 'www.submit.mares.ooo') {
       return redirect('https://github.com/firlin123/mares-ooo/issues/new');
     }
-    let useOoo = null;
-    if (url.pathname.startsWith('/test/') && MARE_OOOS[url.pathname.slice(6)]) {
-      useOoo = MARE_OOOS[url.pathname.slice(6)];
+    /** @type {MareOoo | undefined} */
+    let useOoo = /** @type {any} */ (undefined);
+    if (url.pathname.startsWith('/test/')) {
+      const testOOO = parseInt(url.pathname.slice(6));
+      if (!isNaN(testOOO) && testOOO >= 0 && testOOO < MARE_OOOS.length) {
+        useOoo = MARE_OOOS[testOOO];
+      }
     }
     const randomMareOoo = useOoo ? useOoo : MARE_OOOS[Math.floor(Math.random() * MARE_OOOS.length)];
-    const el = randomMareOoo.file.endsWith('.webm')
+    const el = randomMareOoo.video
       ? `<video autoplay loop muted src="https://firlin123.github.io/mares-ooo/${randomMareOoo.file}" alt="${randomMareOoo.alt}"></video>`
       : `<img src="https://firlin123.github.io/mares-ooo/${randomMareOoo.file}" alt="${randomMareOoo.alt}">`;
     return createHtmlResponse(
