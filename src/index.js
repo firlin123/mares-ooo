@@ -70,6 +70,9 @@ export default {
     if (url.hostname === 'submit.mares.ooo' || url.hostname === 'www.submit.mares.ooo') {
       return redirect('https://github.com/firlin123/mares-ooo/issues/new');
     }
+    if (url.pathname === '/ponies.json') {
+      return new Response(JSON.stringify(MARE_OOOS), { headers: { 'Content-Type': 'application/json' } });
+    }
     /** @type {MareOoo | undefined} */
     let useOoo = /** @type {any} */ (undefined);
     if (url.pathname.startsWith('/test/')) {
