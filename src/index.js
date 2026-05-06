@@ -1,4 +1,6 @@
-const oooImports = import.meta.glob('../ponies/*/*.json', { eager: true });
+// @ts-check
+/// <reference types="@cloudflare/workers-types" />
+/// <reference types="vite/client" />
 
 /**
  * @typedef {Object} MareOoo
@@ -7,6 +9,16 @@ const oooImports = import.meta.glob('../ponies/*/*.json', { eager: true });
  * @property {string} file - The file path to the image/video.
  * @property {boolean} [video] - Whether the file is a video (optional, defaults to false).
  */
+
+/**
+ * @typedef {Object} MareOooModuleDefaultExport
+ * @property {MareOoo} default - The default export containing the MareOoo data.
+ */
+
+/** @typedef {MareOoo & MareOooModuleDefaultExport} MareOooModule */
+
+/** @type {Record<string, MareOooModule | (() => Promise<MareOooModule>)>} */
+const oooImports = import.meta.glob('../ponies/*/*.json', { eager: true });
 
 /** @type {MareOoo[]} */
 const MARE_OOOS = [];
@@ -19,9 +31,20 @@ for (const path in oooImports) {
     typeof data.default.source === 'string'
   ) {
     MARE_OOOS.push(data.default);
+  } else {
+    console.warn(`Invalid MareOoo data in file ${path}:`, data);
   }
 }
 
+/**
+ * Creates an HTML response with the given head and body content.
+ * 
+ * @param {string} head - The content to be placed inside the <head> tag.
+ * @param {string} body - The content to be placed inside the <body> tag.
+ * @param {Object} [headers={}] - Optional additional headers to include in the response.
+ * @param {number} [status=200] - The HTTP status code for the response.
+ * @return {Response} A Response object containing the generated HTML content.
+ */
 function createHtmlResponse(head, body, headers = {}, status = 200) {
   headers = headers || {};
   status = status || 200;
@@ -33,6 +56,12 @@ function createHtmlResponse(head, body, headers = {}, status = 200) {
 </html>`, { headers, status });
 }
 
+/**
+ * Creates a redirect response to the specified URL.
+ * 
+ * @param {string} url - The URL to redirect to.
+ * @return {Response} A Response object that redirects the client to the specified URL.
+ */
 function redirect(url) {
   return createHtmlResponse(
     `<title>Redirecting to ${url}...</title><meta http-equiv="refresh" content="0; url="${url}">`,
@@ -65,13 +94,33 @@ img, video {
   height: 100%;
   object-fit: contain;
   background-color: black;
-}`;
+}`.replace(/\s+/g, ' ').replace(/;}/g, '}');
 
+/**
+ * @typedef {Object} AppEnv
+ * @property {string} APP_JWT_SECRET - A secret string for JWT authentication
+ * @property {string} ADMIN_USERNAME - The username for admin access
+ * @property {string} ADMIN_PASSWORD_HASH - The hashed and salted password for admin access
+ */
+
+/** @type {typeof import('./admin') | null} */
+let adminHandlerModule = null;
+
+/** @type {ExportedHandler<AppEnv>} */
 export default {
   async fetch(request, env, ctx) {
     let url = new URL(request.url);
     if (url.pathname === '/favicon.ico') {
       return fetch('https://firlin123.github.io/mares-ooo/img/favicon.ico');
+    }
+    if (url.hostname === 'admin.mares.ooo' || url.hostname === 'www.admin.mares.ooo') {
+      if (!adminHandlerModule) {
+        adminHandlerModule = await import('./admin');
+      }
+      if (!adminHandlerModule || !adminHandlerModule.default || typeof adminHandlerModule.default.fetch !== 'function') {
+        return new Response('Admin handler module is not properly loaded.', { status: 500 });
+      }
+      return adminHandlerModule.default.fetch(request, env, ctx);
     }
     if (url.hostname === 'submit.mares.ooo' || url.hostname === 'www.submit.mares.ooo') {
       return redirect('https://github.com/firlin123/mares-ooo/issues/new');

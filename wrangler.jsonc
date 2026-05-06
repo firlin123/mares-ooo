@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "workers_dev": false,
   "preview_urls": false,
-  "compatibility_date": "2024-07-11",
+  "compatibility_date": "2026-05-06",
   "routes": [
     {
       "pattern": "https://www.mares.ooo/*",
@@ -20,6 +20,14 @@
     },
     {
       "pattern": "https://www.submit.mares.ooo/*",
+      "zone_name": "mares.ooo"
+    },
+    {
+      "pattern": "https://admin.mares.ooo/*",
+      "zone_name": "mares.ooo"
+    },
+    {
+      "pattern": "https://www.admin.mares.ooo/*",
       "zone_name": "mares.ooo"
     },
     {
@@ -45,6 +53,18 @@
       "custom_domain": true,
       "enabled": true,
       "previews_enabled": false
+    },
+    {
+      "pattern": "admin.mares.ooo",
+      "custom_domain": true,
+      "enabled": true,
+      "previews_enabled": false
+    },
+    {
+      "pattern": "www.admin.mares.ooo",
+      "custom_domain": true,
+      "enabled": true,
+      "previews_enabled": false
     }
   ],
   "observability": {
@@ -55,5 +75,10 @@
     "traces": {
       "enabled": true
     }
+  },
+  "secrets": {
+    "required": [
+      "APP_JWT_SECRET", "ADMIN_USERNAME", "ADMIN_PASSWORD_HASH"
+    ]
   }
 }
