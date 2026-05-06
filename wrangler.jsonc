@@ -1,4 +1,5 @@
 {
+  "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "mares-ooo",
   "main": "src/index.js",
   "workers_dev": false,
@@ -23,31 +24,33 @@
     },
     {
       "pattern": "mares.ooo",
-      "zone_name": "mares.ooo",
       "custom_domain": true,
       "enabled": true,
       "previews_enabled": false
     },
     {
       "pattern": "www.mares.ooo",
-      "zone_name": "mares.ooo",
       "custom_domain": true,
       "enabled": true,
       "previews_enabled": false
     },
     {
       "pattern": "submit.mares.ooo",
-      "zone_name": "mares.ooo",
       "custom_domain": true,
       "enabled": true,
       "previews_enabled": false
     },
     {
       "pattern": "www.submit.mares.ooo",
-      "zone_name": "mares.ooo",
       "custom_domain": true,
       "enabled": true,
       "previews_enabled": false
     }
-  ]
+  ],
+  "observability": {
+    "enabled": true,
+    "traces": {
+      "enabled": true
+    }
+  }
 }
