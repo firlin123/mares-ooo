@@ -23,14 +23,6 @@
       "zone_name": "mares.ooo"
     },
     {
-      "pattern": "https://admin.mares.ooo/*",
-      "zone_name": "mares.ooo"
-    },
-    {
-      "pattern": "https://www.admin.mares.ooo/*",
-      "zone_name": "mares.ooo"
-    },
-    {
       "pattern": "mares.ooo",
       "custom_domain": true,
       "enabled": true,
@@ -53,18 +45,6 @@
       "custom_domain": true,
       "enabled": true,
       "previews_enabled": false
-    },
-    {
-      "pattern": "admin.mares.ooo",
-      "custom_domain": true,
-      "enabled": true,
-      "previews_enabled": false
-    },
-    {
-      "pattern": "www.admin.mares.ooo",
-      "custom_domain": true,
-      "enabled": true,
-      "previews_enabled": false
     }
   ],
   "observability": {
@@ -75,10 +55,5 @@
     "traces": {
       "enabled": true
     }
-  },
-  "secrets": {
-    "required": [
-      "APP_JWT_SECRET", "ADMIN_USERNAME", "ADMIN_PASSWORD_HASH"
-    ]
   }
 }

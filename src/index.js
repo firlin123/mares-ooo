@@ -41,19 +41,22 @@ for (const path in oooImports) {
  * 
  * @param {string} head - The content to be placed inside the <head> tag.
  * @param {string} body - The content to be placed inside the <body> tag.
- * @param {Object} [headers={}] - Optional additional headers to include in the response.
+ * @param {HeadersInit} [headers={}] - Optional additional headers to include in the response.
  * @param {number} [status=200] - The HTTP status code for the response.
  * @return {Response} A Response object containing the generated HTML content.
  */
 function createHtmlResponse(head, body, headers = {}, status = 200) {
-  headers = headers || {};
-  status = status || 200;
-  headers['Content-Type'] = 'text/html; charset=utf-8';
-  return new Response(`<!DOCTYPE html>
-<html>
-  <head>${head}</head>
-  <body>${body}</body>
-</html>`, { headers, status });
+  const realHeaders = new Headers(headers);
+  status = typeof status === 'number' && status >= 100 && status <= 599 ? status : 200;
+  realHeaders.set('Content-Type', 'text/html; charset=utf-8');
+  return new Response(
+    '<!DOCTYPE html>' +
+    '<html>' +
+    `<head>${head}</head>` +
+    `<body>${body}</body>` +
+    '</html>',
+    { headers: realHeaders, status }
+  );
 }
 
 /**
@@ -64,7 +67,8 @@ function createHtmlResponse(head, body, headers = {}, status = 200) {
  */
 function redirect(url) {
   return createHtmlResponse(
-    `<title>Redirecting to ${url}...</title><meta http-equiv="refresh" content="0; url="${url}">`,
+    `<title>Redirecting to ${url}...</title>` +
+    `<meta http-equiv="refresh" content="0; url="${url}">`,
     `<p>Redirecting to <a href="${url}">${url}</a></p>`,
     { Location: url },
     302
@@ -98,13 +102,7 @@ img, video {
 
 /**
  * @typedef {Object} AppEnv
- * @property {string} APP_JWT_SECRET - A secret string for JWT authentication
- * @property {string} ADMIN_USERNAME - The username for admin access
- * @property {string} ADMIN_PASSWORD_HASH - The hashed and salted password for admin access
  */
-
-/** @type {typeof import('./admin') | null} */
-let adminHandlerModule = null;
 
 /** @type {ExportedHandler<AppEnv>} */
 export default {
@@ -113,16 +111,10 @@ export default {
     if (url.pathname === '/favicon.ico') {
       return fetch('https://firlin123.github.io/mares-ooo/img/favicon.ico');
     }
-    if (url.hostname === 'admin.mares.ooo' || url.hostname === 'www.admin.mares.ooo') {
-      if (!adminHandlerModule) {
-        adminHandlerModule = await import('./admin');
-      }
-      if (!adminHandlerModule || !adminHandlerModule.default || typeof adminHandlerModule.default.fetch !== 'function') {
-        return new Response('Admin handler module is not properly loaded.', { status: 500 });
-      }
-      return adminHandlerModule.default.fetch(request, env, ctx);
-    }
-    if (url.hostname === 'submit.mares.ooo' || url.hostname === 'www.submit.mares.ooo') {
+    if (
+      url.hostname === 'submit.mares.ooo' || url.hostname === 'www.submit.mares.ooo' ||
+      url.hostname === 'submit.localhost' || url.hostname === 'www.submit.localhost'
+    ) {
       return redirect('https://github.com/firlin123/mares-ooo/issues/new');
     }
     if (url.pathname === '/ponies.json') {
