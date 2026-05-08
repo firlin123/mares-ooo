@@ -7,44 +7,20 @@
   "compatibility_date": "2026-05-06",
   "routes": [
     {
-      "pattern": "https://www.mares.ooo/*",
-      "zone_name": "mares.ooo"
-    },
-    {
-      "pattern": "https://mares.ooo/*",
-      "zone_name": "mares.ooo"
-    },
-    {
-      "pattern": "https://submit.mares.ooo/*",
-      "zone_name": "mares.ooo"
-    },
-    {
-      "pattern": "https://www.submit.mares.ooo/*",
-      "zone_name": "mares.ooo"
-    },
-    {
       "pattern": "mares.ooo",
-      "custom_domain": true,
-      "enabled": true,
-      "previews_enabled": false
+      "custom_domain": true
     },
     {
       "pattern": "www.mares.ooo",
-      "custom_domain": true,
-      "enabled": true,
-      "previews_enabled": false
+      "custom_domain": true
     },
     {
       "pattern": "submit.mares.ooo",
-      "custom_domain": true,
-      "enabled": true,
-      "previews_enabled": false
+      "custom_domain": true
     },
     {
       "pattern": "www.submit.mares.ooo",
-      "custom_domain": true,
-      "enabled": true,
-      "previews_enabled": false
+      "custom_domain": true
     }
   ],
   "observability": {
