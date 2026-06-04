@@ -108,9 +108,6 @@ img, video {
 export default {
   async fetch(request, env, ctx) {
     let url = new URL(request.url);
-    if (url.pathname === '/favicon.ico') {
-      return redirect('https://firlin123.github.io/mares-ooo/img/favicon.ico');
-    }
     if (
       url.hostname === 'submit.mares.ooo' || url.hostname === 'www.submit.mares.ooo' ||
       url.hostname === 'submit.localhost' || url.hostname === 'www.submit.localhost'
